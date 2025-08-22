@@ -32,6 +32,18 @@ If you are developing a production application, we recommend using TypeScript wi
    -created redux store with userSlice
    -implement signout
    -update profile
+   -Bug Fix- no open the page by redirecting write thr route you have to sigin or out to change the page
+   -makeing the uppermaincontainer
+        -video titleContainer
+        -video backgroundContaier
+   -Learing about TMDb (for fetching the data movie)
+   -use the key and make a constant
+   -import title
+   -import trailer video from the api and show it in ui
+   -adjust it by using tailwind css
+   -make it working ad autoplay
+   -now working on cards for the website in secondary part
+
 
 # Features
  -Login/sign page

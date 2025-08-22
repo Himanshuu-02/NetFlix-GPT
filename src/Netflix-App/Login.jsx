@@ -4,13 +4,14 @@ import {checkValidData} from "../utils/validate"
 import ForgotPass from "./ForgotPass";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { avatarURL, BgImg } from "../utils/constants";
 
 
 const Login = () => {
-  const navigate= useNavigate()
+  // const navigate= useNavigate()
   const [isSignIn, setSignIn] = useState(true);
 const[errorMessage,setErrorMessage]= useState(null)
 const[forgotpass,setForgotpass]= useState(false)
@@ -19,6 +20,7 @@ const dispatch = useDispatch()
   const name= useRef(null);
   const password=useRef(null);
   // signin/signup page handler
+
   const signupHandler = () => {
     setSignIn(!isSignIn);
   };
@@ -41,7 +43,7 @@ const dispatch = useDispatch()
   .then((userCredential) => {
     const user = userCredential.user;
     updateProfile(user, {
-  displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/196507142?v=4"
+  displayName: name.current.value, photoURL: avatarURL
 }).then(() => {
    const { uid, email, displayName, photoURL } = auth.currentUser;
           dispatch(
@@ -53,7 +55,7 @@ const dispatch = useDispatch()
             })
           );
   // Profile updated!
-  navigate("/browse")
+  // navigate("/browse")
   // ...
 }).catch((error) => {
   // An error occurred
@@ -78,7 +80,7 @@ const dispatch = useDispatch()
     // Signed in 
     const user = userCredential.user;
     console.log(user)
-    navigate("/browse")
+    // navigate("/browse")
     // ...
   })
   .catch((error) => {
@@ -97,20 +99,23 @@ const dispatch = useDispatch()
   return (
     <div>
       <Header />
-      <div className="w-full h-full object-cover absolute ">
+      <div className="mx-w-full max-h-full object-cover absolute ">
         <img 
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg"
+          src={BgImg}
           alt="Bg-img"
           width="100%"
            height="100vh"
+           className="min-h-[100vh]"
+
         />
       </div>
 
      {!forgotpass? 
        //Normal sign In form
+       <div className="absolute  right-0 left-0 top-0 bottom-0 px-3.5">
      (<form onSubmit={(e)=>{
         e.preventDefault()
-      }} className="max-w-[30rem] absolute p-10 bg-black/80 my-60 mx-auto right-0 left-0 text-white rounded-lg ">
+      }} className="max-w-[30rem]  p-10 bg-black/80 my-55 mx-auto text-white rounded-lg ">
         <h1 className="py-4 text-4xl font-bold">
           {isSignIn ? "Sign In" : "Sign up"}
         </h1>
@@ -159,12 +164,10 @@ const dispatch = useDispatch()
             {isSignIn ? "Sign up now" : "Sign In"}
           </span>
         </h4>
-      </form>):
+      </form>) </div>:
       (<ForgotPass setForgotpass={setForgotpass}/>)
-     }
       
-
-
+     }
     </div>
   );
 };
