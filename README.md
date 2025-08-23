@@ -43,6 +43,9 @@ If you are developing a production application, we recommend using TypeScript wi
    -adjust it by using tailwind css
    -make it working ad autoplay
    -now working on cards for the website in secondary part
+   -build second container
+   -design cards and fetch all from the api
+   -make it dynamic also
 
 
 # Features

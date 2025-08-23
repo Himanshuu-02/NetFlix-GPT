@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
 import useNowPlayingMovies from '../Hooks/useNowPlayingMovies'
-import MainContainer from './UpperMainContainer'
-import SecondaryContainer from './SecondContainer'
+import SecondaryContainer from './LowerMainContainer'
 import UpperMainContainer from './UpperMainContainer'
+import usePopularMovies from '../Hooks/usePopularMovies'
+import useUpcomingMovies from '../Hooks/useUpcomingMovies'
 
 const Browse = () => {
   useNowPlayingMovies()
+  usePopularMovies()
+  useUpcomingMovies
   
   return (
     <div >

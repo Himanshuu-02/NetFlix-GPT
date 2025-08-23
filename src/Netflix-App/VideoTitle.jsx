@@ -28,8 +28,8 @@ import React from 'react';
 
 const VideoTitle = ({ title, overview }) => {
   return (
-    <div className=" relative gap-1">
-      <div className="w-full absolute aspect-video pt-[21%] max-sm:pt-[116%] px-6 sm:px-12 md:px-24 text-white  bg-gradient-to-r from-black ">
+    <div className=" relative gap-1 ">
+      <div className="w-full absolute aspect-video pt-[21%] max-sm:pt-[116%] px-6 sm:px-12 md:px-24 text-white  bg-gradient-to-r from-black -mt-[63px] ">
         {/* Title */}
         <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl mb-4">
           {title}
@@ -42,10 +42,10 @@ const VideoTitle = ({ title, overview }) => {
         
         {/* Buttons */}
         <div className="flex flex-wrap gap-3 sm:gap-4 mt-4 sm:mt-6">
-          <button className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-lg md:text-xl font-semibold bg-white text-black rounded-lg hover:bg-white/80 transition">
+          <button className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-lg md:text-xl font-semibold bg-white text-black rounded-lg hover:bg-white/80 transition cursor-grab">
             ▶️ Play
           </button>
-          <button className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-lg md:text-xl font-semibold bg-gray-700/20 text-white rounded-lg hover:bg-gray-500 transition">
+          <button className="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-sm sm:text-lg md:text-xl font-semibold bg-gray-700/20 text-white rounded-lg hover:bg-gray-500 transition cursor-grab">
             ℹ️ More Info
           </button>
         </div>
