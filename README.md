@@ -46,7 +46,15 @@ If you are developing a production application, we recommend using TypeScript wi
    -build second container
    -design cards and fetch all from the api
    -make it dynamic also
-
+   -make new hooks for fetching the more movie list
+        -usetopRatedhook
+        -useupcominghook
+   -now use gpt for search
+      -built it
+      -create gptSearchbar page(styling it)
+   -add language feature in my searchbar project
+   
+   
 
 # Features
  -Login/sign page
