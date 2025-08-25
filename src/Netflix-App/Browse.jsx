@@ -5,14 +5,16 @@ import SecondaryContainer from './LowerMainContainer'
 import UpperMainContainer from './UpperMainContainer'
 import usePopularMovies from '../Hooks/usePopularMovies'
 import useUpcomingMovies from '../Hooks/useUpcomingMovies'
+import useToprateMovies from '../Hooks/useToprateMovies'
 
 const Browse = () => {
   useNowPlayingMovies()
   usePopularMovies()
-  useUpcomingMovies
+  useUpcomingMovies()
+  useToprateMovies()
   
   return (
-    <div >
+    <div className='w-screen' >
     <Header/>
     <UpperMainContainer/>
     <SecondaryContainer/> 

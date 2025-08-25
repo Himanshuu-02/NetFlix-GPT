@@ -58,7 +58,7 @@ const Header = () => {
     }
   }, []);
   return (
-    <div className='absolute py-4 px-8 w-full bg-gradient-to-b from-black z-30 flex justify-between sm:mx-[-12px] ' > 
+    <div className='absolute py-4 px-8 w-full bg-gradient-to-b from-black z-70 flex justify-between sm:mx-[-12px] ' > 
     <img
      className='w-48' src={LOGO} alt="logo" />
 

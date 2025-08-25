@@ -71,19 +71,20 @@ const VideoBackground = ({ movieId }) => {
   }, []);
   return (
     <div>
-      {/* <iframe
-        className=" w-full aspect-video min-h-[100vh]"
+      <iframe
+        className=" w-screen aspect-video min-h-[100vh]"
         src={
           "https://www.youtube.com/embed/" +
           trailerVideo?.key +
           "?si=y6HfINxxQRW0H5ai?&autoplay=1&mute=1&loop=1&controls=1"
         }
+        frameborder="0"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
-      ></iframe> */}
+      ></iframe>
 
-      <iframe  className="w-screen aspect-video min-h-[100vh]"  src="https://www.youtube.com/embed/d9erkpdh5o0?si=y6HfINxxQRW0H5ai?&autoplay=1&mute=1&loop=1&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      {/* <iframe  className="w-screen aspect-video min-h-[100vh]"  src="https://www.youtube.com/embed/d9erkpdh5o0?si=y6HfINxxQRW0H5ai?&autoplay=1&mute=1&loop=1&controls=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */}
     </div>
   );
 };

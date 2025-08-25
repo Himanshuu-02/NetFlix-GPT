@@ -13,10 +13,22 @@ const SecondaryContainer = () => {
       <div className=" bg-black">
         <div className="-mt-59 relative pl-5 z-22">
           <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
-          <MovieList title={"Trending"} movies={movies?.nowPlayingMovies} />
-          <MovieList title={"Popular"} movies={movies?.popularMovies} />
+          <MovieList title={"Trending"} movies={movies?.upcomingMovies} />
+          <MovieList title={"Popular"} movies={movies?.topRatedMovies} />
           <MovieList title={"Shows"} movies={movies?.nowPlayingMovies} />
-          <MovieList title={"Upcoming"} movies={movies?.popularMovies} />
+          <MovieList title={"Upcoming"} movies={movies?.upcomingMovies} />
+          <MovieList title={"Comedy"} movies={movies?.popularMovies} />
+          <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
+          <MovieList title={"Trending"} movies={movies?.upcomingMovies} />
+          <MovieList title={"Popular"} movies={movies?.topRatedMovies} />
+          <MovieList title={"Shows"} movies={movies?.nowPlayingMovies} />
+          <MovieList title={"Upcoming"} movies={movies?.upcomingMovies} />
+          <MovieList title={"Comedy"} movies={movies?.popularMovies} />
+          <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
+          <MovieList title={"Trending"} movies={movies?.upcomingMovies} />
+          <MovieList title={"Popular"} movies={movies?.topRatedMovies} />
+          <MovieList title={"Shows"} movies={movies?.nowPlayingMovies} />
+          <MovieList title={"Upcoming"} movies={movies?.upcomingMovies} />
           <MovieList title={"Comedy"} movies={movies?.popularMovies} />
         </div>
       </div>

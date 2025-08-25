@@ -2,13 +2,13 @@ import React, { useRef, useState } from "react";
 import Header from "./Header";
 import { checkValidData } from "../utils/validate";
 import ForgotPass from "./ForgotPass";
-import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile} from "firebase/auth";
 import { auth } from "../utils/firebase";
 // import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 import { avatarURL, BgImg } from "../utils/constants";
+import Footer from "./Footer";
 
 const Login = () => {
   // const navigate= useNavigate()
@@ -192,6 +192,7 @@ const Login = () => {
       ) : (
         <ForgotPass setForgotpass={setForgotpass} />
       )}
+      <Footer/>
     </div>
   );
 };
