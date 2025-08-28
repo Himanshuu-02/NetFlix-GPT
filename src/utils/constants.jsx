@@ -23,3 +23,12 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+//first key
+// export const OPENAI_key= "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"
+
+//second key
+// export const OPENAI_key="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"
+
+//third key
+export const OPENAI_key ="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"

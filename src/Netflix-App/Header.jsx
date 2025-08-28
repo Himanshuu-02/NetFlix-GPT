@@ -8,12 +8,12 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { addNowPlayingMovies, addTrailerVideo } from "../utils/moviesSlice";
 import { toggleGptSearchView } from "../utils/gptSlice";
-import {changeLanguage} from "../utils/configSlice"
+import { changeLanguage } from "../utils/configSlice";
 const Header = () => {
   const user = useSelector((store) => store.user); //for profile url
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const showGptSearch = useSelector((store)=> store.gpt.showGptSearch)
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
   const handleSignout = () => {
     signOut(auth)
       .then(() => {
@@ -64,7 +64,7 @@ const Header = () => {
   //language selector handler
   const handleLanguageChange = (e) => {
     // console.log(e.target.value);
-    dispatch(changeLanguage(e.target.value))
+    dispatch(changeLanguage(e.target.value));
   };
   return (
     <div className="absolute py-2 px-8  bg-gradient-to-b from-black z-70 flex justify-between sm:mx-[-12px] w-screen ">
@@ -80,23 +80,25 @@ const Header = () => {
   /> */}
           {/* new github user icon */}
 
-       {showGptSearch &&   <select
-            name="lang"
-            className="p-2 bg-gray-900 text-white cursor-pointer"
-            onChange={handleLanguageChange}
-          >
-            {SUPPORTED_LANGUAGES.map((lang) => (
-              <option key={lang.identifier} value={lang.identifier}>
-                {lang.name}
-              </option>
-            ))}
-          </select>}
+          {showGptSearch && (
+            <select
+              name="lang"
+              className="p-2 bg-gray-900 text-white cursor-pointer"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
 
           <button
             className="m-4 p-3 rounded-lg bg-red-700 text-white font-bold cursor-grab hover:bg-red-500 ml-2"
             onClick={gptSearchHandler}
           >
-           {showGptSearch? "Home ⌂":" GPT Search 🔍"}
+            {showGptSearch ? "Home ⌂" : " GPT Search 🔍"}
           </button>
 
           <img
@@ -106,12 +108,21 @@ const Header = () => {
           />
           {/* Dropdown */}
           <select
-            onClick={handleSignout}
+            onClick={(e)=>{
+              if(e.target.value==="signout"){
+                handleSignout();
+              }
+            }}
             name="user"
             id="userid"
-            className=" text-white text-lg px-2 py-1 rounded-md  focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer font-bold"
+            className=" text-white text-lg px-1 py-1 rounded-md  focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer font-bold bg-black"
           >
-            <option value="signout">{user.displayName}</option>
+            {/* <option value="signout">{user.displayName}</option> */}
+            
+            <option value="">{user.displayName}</option>
+            <option value="settings">Settings</option>
+            <option value="help">Help</option>
+            <option value="signout">Sign Out</option>
             {/* <option value="signout">Sign Out</option> */}
           </select>
         </div>

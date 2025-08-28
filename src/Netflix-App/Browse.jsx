@@ -29,7 +29,8 @@ const Browse = () => {
           <SecondaryContainer />
         </>
       )}
-
+     {!showGptSearch && <h1 className="bg-black flex justify-center items-center text-white ">Made by Himanshu ❤️
+</h1>}
       {/*MainContainer
            -VideoBackground
            -VideoTitle
