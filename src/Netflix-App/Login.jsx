@@ -109,7 +109,7 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="min-w-full h-full object-cover absolute ">
+      <div className="min-w-full h-full object-cover fixed ">
         <img
           src={BgImg}
           alt="Bg-img"
@@ -125,7 +125,7 @@ const Login = () => {
             onSubmit={(e) => {
               e.preventDefault();
             }}
-            className="max-w-[30rem]  p-10 bg-black/80 my-59 mx-auto text-white rounded-lg "
+            className="max-w-[30rem]  p-10 bg-black/80 my-45 mx-auto text-white rounded-lg "
           >
             <h1 className="py-5 text-4xl font-bold">
               {isSignIn ? "Sign In" : "Sign up"}

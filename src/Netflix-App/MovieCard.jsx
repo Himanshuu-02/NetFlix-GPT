@@ -2,11 +2,12 @@ import React from 'react'
 import { IMG_CDN_URL } from '../utils/constants'
 
 const MovieCard = ({posterPath}) => {
+  if(!posterPath) return null;
   // const src= `${IMG_CDN_URL}${posterPath}`
   // console.log(posterPath)
   return (
     <div className='w-49 pr-5 rounded-lg cursor-pointer '>
-      <img className=' transition-transform duration-300 hover:scale-120 hover:z-10' src={IMG_CDN_URL + posterPath } alt="Movie Card " />
+      <img className=' transition duration-300 hover:scale-110 hover:z-10' src={IMG_CDN_URL + posterPath } alt="Movie Card " />
     </div>
   )
 }
