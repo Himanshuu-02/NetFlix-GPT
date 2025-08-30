@@ -31,7 +31,7 @@ const VideoTitle = ({ title, overview }) => {
     <div className=" relative gap-1 ">
       <div className="w-full absolute aspect-video pt-[21%] max-sm:pt-[116%] px-6 sm:px-12 md:px-24 text-white  bg-gradient-to-r from-black -mt-[63px] ">
         {/* Title */}
-        <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-5xl mb-4">
+        <h1 className="font-bold text-2xl sm:text-3xl md:text-5xl lg:text-5xl mb-4">
           {title}
         </h1>
         

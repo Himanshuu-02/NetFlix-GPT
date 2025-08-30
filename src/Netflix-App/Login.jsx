@@ -109,13 +109,13 @@ const Login = () => {
   return (
     <div>
       <Header />
-      <div className="min-w-full h-full object-cover fixed ">
+      <div className="min-w-full h-full  fixed ">
         <img
           src={BgImg}
           alt="Bg-img"
           width="100%"
           height="90vh"
-          className="min-h-[100vh] mx-w-[100%]"
+          className="h-screen object-cover"
         />
       </div>
       {!forgotpass ? (

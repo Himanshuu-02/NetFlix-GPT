@@ -104,9 +104,9 @@ const GptSearchBar = ({ setMovies }) => {
   };
 
   return (
-    <div className="pt-[10%] flex justify-center">
+    <div className="pt-[45%] md:pt-[10%]  flex justify-center ">
       <form
-        className="w-1/2 bg-black/80 grid grid-cols-12 rounded-lg"
+        className="w-full md:w-1/2 bg-black/80 grid grid-cols-12 rounded-lg mt-4 sm:mt-20 md:mt-32 lg:mt-0 "
         onSubmit={(e) => e.preventDefault()}
       >
         <input
@@ -117,7 +117,7 @@ const GptSearchBar = ({ setMovies }) => {
         />
         <button
           type="submit"
-          className="py-2 px-4 m-4 bg-red-700 text-white rounded-r-lg col-span-3 cursor-pointer hover:bg-red-900 font-bold text-lg"
+          className="py-1 px-2 m-2 md:m-4 md:px-4 md:py-2 bg-red-700 text-white rounded-r-lg col-span-3 cursor-pointer hover:bg-red-900 font-bold text-lg"
           onClick={handleSearchClick}
         >
           {lang[langKey].search} 🔍

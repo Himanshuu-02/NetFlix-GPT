@@ -37,9 +37,9 @@ const GptMovieSuggestion = ({ movies }) => {
   const [trailerUrl, setTrailerUrl] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  if (!movies && movies===null) {
+  if (!movies || movies.length===0) {
     return (
-      <p className="text-white text-bold text-5xl text-center mt-6">
+      <p className="text-red-600 text-bold text-3xl text-center mt-6">
         No movies found. Try another search!
       </p>
     );
@@ -90,9 +90,9 @@ const GptMovieSuggestion = ({ movies }) => {
                   : "https://cdn.displate.com/artwork/270x380/2024-09-27/698278bd-0e81-489e-816e-a1ecef2bb517.jpg"
               }
               alt={movie.title}
-              className="w-full h-80 object-cover"
+              className="w-full  h-50 md:h-80 object-cover"
             />
-            <div className="p-2">
+            <div className="p-[3px] md:p-[5px]">
               <h3 className="text-lg font-bold">{movie.title}</h3>
               <p className="text-sm text-gray-400">
                 {movie.release_date || "N/A"}
@@ -106,7 +106,7 @@ const GptMovieSuggestion = ({ movies }) => {
         <div className="fixed inset-0 bg-black/90 flex justify-center items-center z-50">
           <div className="bg-gray-900 text-white p-4 rounded-lg max-w-2xl w-full relative">
             <button
-              className="absolute top-2 right-4 text-white text-2xl"
+              className="absolute top-2 right-4 text-white text-2xl cursor-pointer"
               onClick={closeModal}
             >
               ✖
