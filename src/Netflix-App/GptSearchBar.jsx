@@ -87,7 +87,7 @@ const GptSearchBar = ({ setMovies }) => {
         return [];
       }
       const data = await response.json();
-      console.log(data)
+      // console.log(data)
       return data.results || [];
     } catch (error) {
       console.error("Error fetching TMDB:", error);
