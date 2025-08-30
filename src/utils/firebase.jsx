@@ -11,7 +11,7 @@ const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTHDOMAIN,
   // projectId: import.meta.env.VITE_FIREBASE_PROJECTID
-  projectId: netflixgpt-b8111,
+  projectId: "netflixgpt-b8111",
   storageBucket: "netflixgpt-b8111.firebasestorage.app",
   messagingSenderId: "551527545912",
   appId: "1:551527545912:web:298143d168cb77fd96facd",
