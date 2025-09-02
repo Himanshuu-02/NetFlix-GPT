@@ -76,7 +76,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          // setErrorMessage(errorMessage + errorCode)
+           setErrorMessage(errorMessage + errorCode)
           // ..
         });
       //////////////////////////////////////
@@ -97,7 +97,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-          // setErrorMessage(errorMessage + errorCode)
+           setErrorMessage(errorMessage + errorCode)
         });
     }
   };
@@ -187,12 +187,35 @@ const Login = () => {
                 {isSignIn ? "Sign up now" : "Sign In"}
               </span>
             </h4>
+            <div className="flex gap-4 mt-4 justify-center">
+        <a href="https://github.com/Himanshuu-02">
+          <img
+            src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+            alt="GitHub"
+            className="w-8 h-8"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/himanshu-sharma-533b42287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            className="w-8 h-8 "
+          />
+        </a>
+        <a href="https://www.instagram.com/iamhimanshuu_0?igsh=MTR6OTdyYmZkbmg3Nw==">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+            alt="Instagram"
+            className="w-8 h-8"
+          />
+        </a>
+      </div>
           </form>
         </div>
       ) : (
         <ForgotPass setForgotpass={setForgotpass} />
       )}
-      <Footer/>
+    
     </div>
   );
 };
