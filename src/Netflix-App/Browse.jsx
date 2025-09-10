@@ -8,6 +8,7 @@ import useUpcomingMovies from "../Hooks/useUpcomingMovies";
 import useToprateMovies from "../Hooks/useToprateMovies";
 import { useSelector } from "react-redux";
 import GptSearch from "./GptSearch";
+import Icons from "./Icons";
 
 const Browse = () => {
   const showGptSearch = useSelector((store) => 
@@ -38,6 +39,7 @@ const Browse = () => {
             -movieList *n
             -cards *n
        */}
+       <Icons/>
     </div>
   );
 };
