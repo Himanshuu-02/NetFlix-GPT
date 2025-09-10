@@ -18,7 +18,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const email = useRef(null);
   const name = useRef(null);
-  const password = useRef(null);
+  const password = useRef(null);      
   // signin/signup page handler
 
   const signupHandler = () => {
@@ -31,7 +31,7 @@ const Login = () => {
     // console.log(email.current.value)
     // console.log(name.current.value)
     const emailValue = email.current.value;
-    const passwordValue = password.current.value;
+   const passwordValue = password.current.value;
     const validation = checkValidData(emailValue, passwordValue);
     setErrorMessage(validation);
     if (validation) return;
@@ -41,8 +41,8 @@ const Login = () => {
       //here i write signup logic
       createUserWithEmailAndPassword(
         auth,
-        email.current.value,
-        password.current.value
+        email.current.value,  
+       password.current.value
       )
         .then((userCredential) => {
           const user = userCredential.user;
@@ -76,7 +76,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-           setErrorMessage(errorMessage + errorCode)
+           setErrorMessage(errorMessage )
           // ..
         });
       //////////////////////////////////////
@@ -84,7 +84,7 @@ const Login = () => {
       //here i write signin logic
       signInWithEmailAndPassword(
         auth,
-        email.current.value,
+        email.current.value, 
         password.current.value
       )
         .then((userCredential) => {
@@ -97,7 +97,7 @@ const Login = () => {
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
-           setErrorMessage(errorMessage + errorCode)
+           setErrorMessage(errorMessage )
         });
     }
   };
